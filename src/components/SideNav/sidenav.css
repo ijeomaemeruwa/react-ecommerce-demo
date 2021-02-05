@@ -1,0 +1,42 @@
+.sidenav {
+    height: 100vh;
+    width: 300px;
+    background: #fff;
+    /* box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.04); */
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sidenav__container {
+    text-align: left;
+    height: 100%;
+    width: 100%;
+}
+
+.sidenav_button_container {
+    margin: 2rem 0 3rem 3rem;
+}
+
+.sidenav__menu {
+    margin: 1rem 0 1rem 3rem;
+}
+
+.sidenav__menu h5 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.sidenav__menu p {
+    font-size: 14px;
+    color: #333;
+}
+
+.sidenav__list ul {
+    list-style: none;
+}
+
+.sidenav__list ul li {
+    font-size: 14px;
+    color: #333;
+    padding: 10px 0;
+}

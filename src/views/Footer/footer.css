@@ -1,0 +1,59 @@
+.footer {
+    background: #062353;
+    color: #fff;
+    height: 300px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.footer_content {
+    height: 100%;
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-evenly;
+    text-align: left;
+    padding: 1.5rem 0 3rem 0;
+}
+
+.footer_content h5 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding-bottom: 1.5rem;
+}
+
+
+.footer_content ul {
+    list-style: none;
+}
+
+
+.footer_content ul li {
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 10px 0;
+}
+
+
+.designer_brands {
+    display: flex;
+}
+
+.designer_brands .designer_list {
+    margin-left: 3rem;
+}
+
+.footer_contact h6 {
+   font-size: 12px;
+   padding-bottom: 10px;
+}
+
+h6 span {
+    font-size: 2rem;
+    padding-right: 10px;
+}
+
+.social_links span {
+    font-size: 1.8rem;
+    padding: 0 10px;
+}

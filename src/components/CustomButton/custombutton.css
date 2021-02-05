@@ -1,0 +1,29 @@
+.custom__btn {
+    width: 120px;
+    height: 40px; 
+}
+
+.sidenav__btn {
+  width: 150px;
+  height: 40px;
+  font-weight: 600;
+}
+
+.products__btn {
+  width: 100px;
+  height: 35px;
+}
+
+.custom__btn,
+.sidenav__btn,
+.products__btn {
+    padding: 5px;
+    border: 1px solid #0097fd;
+    background: #fff;
+    color: #0097fd;
+    text-align: center;
+    border-radius: 4px;
+}
+/* .products__btn {
+
+}  */
