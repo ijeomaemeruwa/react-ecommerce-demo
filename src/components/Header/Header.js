@@ -5,6 +5,7 @@ import Image from 'react-bootstrap/Image';
 import user from '../../assets/usericon.png';
 import {AiOutlineMenu, AiOutlineShoppingCart} from 'react-icons/ai';
 import {Link} from 'react-router-dom';
+
 // AiOutlineSearch, 
 
 
@@ -14,7 +15,7 @@ const Header = () => {
     <nav className="topnav">
     <div className="topnav_container">
 
-   <div className="topnav_content">
+    <div className="topnav_content">
    <div className="topnav_logo">
     <Link to="/"><h4><AiOutlineMenu /> Logo</h4></Link>
     </div>
@@ -27,15 +28,17 @@ const Header = () => {
     </div> 
     </div>
     
-   
     <div className="topnav_user">
-     <CustomButton>Sign In</CustomButton>
+    <Link to="/signup">
+     <CustomButton>
+      Sign In
+     </CustomButton>
+     </Link>
      <span><AiOutlineShoppingCart /></span>
      <Image src={user} className="user" alt="user" />
     </div>
-
-    </div>
-    </nav>       
+  </div>
+  </nav>       
     </>
     )
 }

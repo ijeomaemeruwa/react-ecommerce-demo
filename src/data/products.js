@@ -8,12 +8,13 @@ import img7 from '../assets/img7.jpg';
 import img8 from '../assets/img8.jpg';
 import img9 from '../assets/img9.jpg';
 import img10 from '../assets/img10.jpg';
+import img11 from '../assets/img11.jpg';
 
 
 export const PRODUCTS = [
     {
         id: 1,
-        image: img1,
+        image: img11,
         short_description: 'Lorem ipsum dolor sit amet',
         long_description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
         price: '$38.99',
