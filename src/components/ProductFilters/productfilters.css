@@ -1,0 +1,22 @@
+.product__filters {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; */
+    margin: 2rem 1rem 0 0;
+}
+
+.product__filters .filters {
+    display: flex;
+    align-items: center;
+}
+
+.filters select {
+    border: 1px solid #828282;
+    border-radius: 6px;
+    background: #fbfbfb;
+    margin: 0 1rem;
+    padding: 6px 20px;
+    font-size: 12px;
+}
+

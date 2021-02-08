@@ -9,3 +9,11 @@ body {
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
 }
+
+.link {
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: none;
+}

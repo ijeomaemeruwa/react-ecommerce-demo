@@ -3,9 +3,10 @@ import Header from './components/Header/Header';
 import ProductPage from './views/Product/ProductPage';
 import SignUp from './views/Auth/SignUp';
 import LogIn from './views/Auth/LogIn';
+import Cart from './views/Cart/Cart';
+import ProductDetails from './views/ProductDetails/ProductDetails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-// ProductDetails
-// Cart
+
 
 
 const App = () => {
@@ -15,10 +16,12 @@ const App = () => {
   <Header />
 
   <Switch>
-      <Route exact path="/"><ProductPage /></Route>
-      <Route path="/productdetails/:id"></Route>
-      <Route exact path="/signup"><SignUp /></Route>
-      <Route exact path="/login"><LogIn /></Route>
+    <Route exact path="/"><ProductPage /></Route>
+    <Route exact path="/productdetails"><ProductDetails /></Route>
+    {/* <Route path="/productdetails/:id"><ProductDetails /></Route> */}
+    <Route exact path="/signup"><SignUp /></Route>
+    <Route exact path="/login"><LogIn /></Route>
+    <Route exact path="/cart"><Cart /></Route>
   </Switch>
   </Router>
   </>

@@ -2,7 +2,7 @@ import React from 'react';
 import './auth.css';
 import Form from 'react-bootstrap/Form';
 import FormInput from '../../components/FormInput/FormInput';
-import {RiFacebookBoxFill} from 'react-icons/ri';
+// import {RiFacebookBoxFill} from 'react-icons/ri';
 import {IoIosCheckboxOutline} from 'react-icons/io';
 
 
@@ -36,7 +36,7 @@ return (
       </button>
 
       <button className="fb__btn">
-      <span><RiFacebookBoxFill /></span>
+      {/* <span><RiFacebookBoxFill /></span> */}
         REGISTER WITH FACEBOOK
       </button>
     </div>

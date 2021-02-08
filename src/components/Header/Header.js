@@ -17,7 +17,9 @@ const Header = () => {
 
     <div className="topnav_content">
    <div className="topnav_logo">
-    <Link to="/"><h4><AiOutlineMenu /> Logo</h4></Link>
+    <Link to="/" className="header__link">
+      <h4><AiOutlineMenu /> Logo</h4>
+    </Link>
     </div>
 
     <div className="topnav_search_container">
@@ -34,7 +36,9 @@ const Header = () => {
       Sign In
      </CustomButton>
      </Link>
-     <span><AiOutlineShoppingCart /></span>
+     <Link to="/cart" className="header__link">
+       <span><AiOutlineShoppingCart /></span>
+     </Link>
      <Image src={user} className="user" alt="user" />
     </div>
   </div>

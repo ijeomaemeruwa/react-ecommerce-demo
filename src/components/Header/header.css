@@ -57,5 +57,15 @@
     padding: 0 10px;
 }
 
+.header__link {
+    text-decoration: none;
+    color: #333;
+}
+
+.header__link:hover {
+    text-decoration: none;
+    color: #333;
+}
+
 
 
