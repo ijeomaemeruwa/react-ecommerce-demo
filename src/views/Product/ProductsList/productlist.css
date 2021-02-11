@@ -5,6 +5,12 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.product__section .mobile_icon {
+    font-size: 2rem;
+    width: 100px;
+    margin-left: 1rem;
+    color: #828282;
+}
 
 .product__tags {
     display: flex;
@@ -62,14 +68,14 @@
 }
 
 .price, 
-.details {
+.details_add {
     display: flex;
     justify-content: space-between;
     padding: 0 5px;
 }
 
 
-.details span {
+.details_add span {
     font-size: 1rem;
     padding-right: 10px;
 }

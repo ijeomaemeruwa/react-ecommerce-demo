@@ -2,12 +2,17 @@ import React from 'react';
 import './sidenav.css';
 import CustomButton from '../CustomButton/CustomButton';
 import {BsFilter} from 'react-icons/bs';
+import { VscClose } from 'react-icons/vsc';
 
-const SideNav = () => {
-    return (
+const SideNavMobile = ({ isOpen, toggle}) => {
+return (
     <>
-    <aside className="sidenav">
-    <div className="sidenav_container">
+    <aside className={isOpen ? "sidenav_mobile_menu active" : "sidenav_mobile_menu"}>
+    <div className="sidenav_container" onClick={toggle}>
+     
+    <div className="close_icon" onClick={toggle}>
+    <VscClose />
+    </div>
 
     <div className="sidenav_button_container">
     <CustomButton sidenav__btn><BsFilter/> Departments</CustomButton>
@@ -30,9 +35,10 @@ const SideNav = () => {
     </div>
     </div>
   </div>
-  </aside>      
+  </aside>       
     </>
     )
 }
 
-export default SideNav;
+
+export default SideNavMobile;

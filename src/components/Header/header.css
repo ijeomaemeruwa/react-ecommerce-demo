@@ -1,6 +1,7 @@
 .topnav {
     height: 80px;
     background: #fff;
+    font-family: 'Poppins', sans-serif;
 } 
 
 
@@ -60,6 +61,12 @@
 .header__link {
     text-decoration: none;
     color: #333;
+}
+
+.header__link span small {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff3700;
 }
 
 .header__link:hover {

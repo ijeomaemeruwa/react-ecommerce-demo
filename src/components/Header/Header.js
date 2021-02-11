@@ -1,15 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './header.css';
 import CustomButton from '../CustomButton/CustomButton';
 import Image from 'react-bootstrap/Image';
 import user from '../../assets/usericon.png';
-import {AiOutlineMenu, AiOutlineShoppingCart} from 'react-icons/ai';
+import {AiOutlineShoppingCart} from 'react-icons/ai';
 import {Link} from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 // AiOutlineSearch, 
 
 
 const Header = () => {
+  const {cartItemsCount} = useContext(CartContext);
+
     return (
     <>
     <nav className="topnav">
@@ -18,7 +21,7 @@ const Header = () => {
     <div className="topnav_content">
    <div className="topnav_logo">
     <Link to="/" className="header__link">
-      <h4><AiOutlineMenu /> Logo</h4>
+      <h4>Logo</h4>
     </Link>
     </div>
 
@@ -32,12 +35,12 @@ const Header = () => {
     
     <div className="topnav_user">
     <Link to="/signup">
-     <CustomButton>
-      Sign In
-     </CustomButton>
+    <CustomButton>Sign In</CustomButton>
      </Link>
-     <Link to="/cart" className="header__link">
-       <span><AiOutlineShoppingCart /></span>
+    <Link to="/cart" className="header__link">
+    <span><AiOutlineShoppingCart />
+       <small>{cartItemsCount}</small>
+    </span>
      </Link>
      <Image src={user} className="user" alt="user" />
     </div>

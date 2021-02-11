@@ -28,7 +28,7 @@ return (
 
     <div className="form__links">
     <p><span><IoIosCheckboxOutline /></span> Remember me</p>
-    <Link to="/login" classname="login">Log in</Link>
+    <p>Forgot Password?</p>
     </div> 
     
 
@@ -41,7 +41,8 @@ return (
       <span><RiFacebookBoxFill /></span>
         REGISTER WITH FACEBOOK
       </button>
-    </div> 
+    </div>
+    <Link to="/login" className="login">Already have an account? Log in</Link> 
     </Form>
     </div>      
     </section>      

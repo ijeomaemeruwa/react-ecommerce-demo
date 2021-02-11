@@ -8,8 +8,9 @@ import ProductDetails from './views/ProductDetails/ProductDetails';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
-
 const App = () => {
+
+
   return (
   <>
   <Router>
@@ -17,8 +18,7 @@ const App = () => {
 
   <Switch>
     <Route exact path="/"><ProductPage /></Route>
-    <Route exact path="/productdetails"><ProductDetails /></Route>
-    {/* <Route path="/productdetails/:id"><ProductDetails /></Route> */}
+    <Route path="/productdetails/:productId"><ProductDetails/></Route>
     <Route exact path="/signup"><SignUp /></Route>
     <Route exact path="/login"><LogIn /></Route>
     <Route exact path="/cart"><Cart /></Route>
