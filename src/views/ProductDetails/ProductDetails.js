@@ -38,7 +38,7 @@ return (
     ))
     }
     </span>
-    <h5>{product.price}</h5>
+    <h5>${product.price}</h5>
      <div className="details__btn">
         <button className="add_btn" onClick={() => addProduct(product)}>
           Add to Cart

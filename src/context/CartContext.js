@@ -1,5 +1,5 @@
 import React, {useState, useEffect, createContext} from 'react';
-// import {PRODUCTS} from '../../src/data/products';
+
 import { 
   addItemToCart, 
   removeItemFromCart, 
@@ -7,7 +7,8 @@ import {
   clearItemFromCart,
   subtotalItems,
   getCartTotal
-   } from './utils';
+
+  } from './utils';
 
 
 export const CartContext = createContext();
@@ -29,10 +30,6 @@ const CartContextProvider = ({children}) => {
   const clearProduct = (item) => {
     setCartItems(clearItemFromCart(cartItems, item));
   }
-
-  // const getCartTotal = (item) => {
-  //    setSubTotal(cartItems)
-  // }
 
 
 useEffect(() => {

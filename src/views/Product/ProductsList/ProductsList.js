@@ -49,9 +49,7 @@ PRODUCTS.map((item) => (
   <h6>{item.brand ? item.brand : null}</h6>
   <p>{item.brand_description ? item.brand_description : null}</p>
   <div className="price">
-      <span className="item_price">
-          {item.price}
-      </span>
+      <span className="item_price">${item.price}</span>
       <span>{item.discont ? item.discount : null}</span>
   </div> 
   <p>{item.shipping_detail}</p> 
