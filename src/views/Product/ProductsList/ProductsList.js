@@ -1,6 +1,5 @@
 import React, {useContext} from 'react';
 import './productlist.css';
-import {PRODUCTS} from '../../../data/products';
 import Image from 'react-bootstrap/Image';
 import CustomButton from '../../../components/CustomButton/CustomButton';
 import Ratings from '../../../components/Ratings/Ratings';
@@ -11,7 +10,7 @@ import { CartContext } from '../../../context/CartContext';
 
 
 
-const ProductsList = ({ toggle }) => {
+const ProductsList = ({ toggle, item }) => {
   const {addProduct} = useContext(CartContext);
 return (
 <>
@@ -33,7 +32,7 @@ return (
 
 <div className="products__container">
 {
-PRODUCTS.map((item) => (
+item.map((item) => (
 <div key={item.id} className="card__container">
 <div className="product__card">
 

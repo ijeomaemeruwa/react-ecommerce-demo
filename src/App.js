@@ -15,17 +15,21 @@ class App extends Component{
     search: ''
   }
  
+  handleChange = (e) => {
+    this.setState({ search: e.target.value })
+  }
 
   render() {
     const { search } = this.state
     const filtered = PRODUCTS.filter(item => {
       return item.brand.toLowerCase().includes(search.toLowerCase());
     })
-    
+
+
   return (
   <>
   <Router>
-  <Header search={search} />
+  <Header search={search} onChange={this.handleChange} />
 
   <Switch>
     <Route exact path="/">

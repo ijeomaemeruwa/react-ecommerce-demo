@@ -6,7 +6,7 @@ import ProductsList from './ProductsList/ProductsList';
 import Footer from '../Footer/Footer';
 
 
-const Products = () => {
+const Products = ({ filtered }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => {
@@ -22,7 +22,7 @@ const Products = () => {
     <SideNavMobile isOpen={isOpen} toggle={toggle} />
     </div>
 
-    <ProductsList toggle={toggle}/>
+    <ProductsList toggle={toggle} item={filtered} />
     </div>
     <Footer />
     </section>      
