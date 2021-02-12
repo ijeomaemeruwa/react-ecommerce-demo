@@ -2,7 +2,7 @@ import React, {useState, useEffect, createContext} from 'react';
 
 import { 
   addItemToCart, 
-  removeItemFromCart, 
+  decrementItem, 
   getCartItemsCount, 
   clearItemFromCart,
   subtotalItems,
@@ -24,7 +24,7 @@ const CartContextProvider = ({children}) => {
   }
 
   const removeProduct = (item) => {
-    setCartItems(removeItemFromCart(cartItems, item))
+    setCartItems(decrementItem(cartItems, item))
   }
 
   const clearProduct = (item) => {

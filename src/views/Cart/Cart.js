@@ -15,7 +15,7 @@ const Cart = () => {
     addProduct, 
     removeProduct, 
     clearProduct,
-    // subTotal,
+    subTotal,
     cartTotal
   } = useContext(CartContext);
 
@@ -75,8 +75,8 @@ return (
     <p>$ {item.price}</p>
   </div>
   <div className="product__sub-total">
-    {/* <p>$ {subTotal.toLocaleString()}</p> */}
-    <p>$ {item.price}</p>
+    <p>$ {subTotal.toLocaleString()}</p>
+    {/* <p>$ {item.price}</p> */}
   </div> 
     </div>
   ))

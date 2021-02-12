@@ -14,10 +14,14 @@ export const addItemToCart = (cartItems, cartItemToAdd) => {
 }
 
 
-export const removeItemFromCart = (cartItems, cartItemToRemove) => {
+export const decrementItem = (cartItems, cartItemToRemove) => {
     const existingCartItem = cartItems.find(
         cartItem => cartItem.id === cartItemToRemove.id
     );
+    if(existingCartItem.quantity === 1) {
+        return cartItems.filter(cartItem => 
+            cartItem.id !== cartItemToRemove.id)
+    }
 
     if(existingCartItem) {
         return cartItems.map(cartItem => 
@@ -28,6 +32,7 @@ export const removeItemFromCart = (cartItems, cartItemToRemove) => {
     }
     return [...cartItems, { ...cartItemToRemove, quantity: 1}]
 }
+
 
 export const clearItemFromCart = (cartItems, item) => 
    cartItems.filter(cartItem => cartItem.id !== item.id);
@@ -41,7 +46,7 @@ export const getCartItemsCount = (cartItems) => cartItems.reduce(
 export const subtotalItems = cartItems => {
     let total = 0;
     cartItems.forEach(product => {
-    total = total + product.quantity * product.price
+    total = total + product.quantity * product.unit_price
     });
     return total;
   }
