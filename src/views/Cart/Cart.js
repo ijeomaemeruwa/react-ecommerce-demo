@@ -15,7 +15,6 @@ const Cart = () => {
     addProduct, 
     removeProduct, 
     clearProduct,
-    subTotal,
     cartTotal
   } = useContext(CartContext);
 
@@ -32,12 +31,12 @@ const Cart = () => {
 return (
 <>
 <main className="cart__section">
-<header className="header">
+{/* <header className="header">
   <p className="col-md-6">Item</p>
   <p>Quantity</p> 
   <p>Unit Price</p>
   <p>Sub-total</p> 
-</header>  
+</header>   */}
 
 <section className="cart__content">
 {
@@ -75,8 +74,8 @@ return (
     <p>$ {item.price}</p>
   </div>
   <div className="product__sub-total">
-    <p>$ {subTotal.toLocaleString()}</p>
-    {/* <p>$ {item.price}</p> */}
+    <p>$ {(item.quantity * item.unit_price).toLocaleString()}</p>
+    {/* <p>$ {subTotal.toLocaleString()}</p> */}
   </div> 
     </div>
   ))

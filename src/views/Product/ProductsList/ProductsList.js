@@ -9,15 +9,36 @@ import {VscMenu} from 'react-icons/vsc';
 import { CartContext } from '../../../context/CartContext';
 
 
+const ProductsList = ({ toggle }) => {
+const {
+    addProduct, 
+    filtered, 
+    search, 
+    handleChange
+  } = useContext(CartContext);
 
-const ProductsList = ({ toggle, item }) => {
-  const {addProduct} = useContext(CartContext);
+
 return (
 <>
 <section className="product__section">
+
+<div className="mobile_view">
 <div className="mobile_icon" onClick={toggle}>
   <VscMenu />
 </div>
+<div className="topnav_search_container">
+  <div className="product_search">
+  <input 
+    className="input" 
+    type="text" 
+    value={search} 
+    onChange={handleChange} 
+    placeholder="Search items.." 
+  />
+  </div> 
+  </div> 
+</div>
+
 <div>
   <ProductFilters />
 </div>
@@ -32,9 +53,9 @@ return (
 
 <div className="products__container">
 {
-item.map((item) => (
-<div key={item.id} className="card__container">
-<div className="product__card">
+  filtered.map((item) => (
+  <div key={item.id} className="card__container">
+  <div className="product__card">
 
 <Link 
   className="link"

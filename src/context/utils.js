@@ -43,14 +43,27 @@ export const getCartItemsCount = (cartItems) => cartItems.reduce(
 );
 
 
-export const subtotalItems = cartItems => {
-    let total = 0;
-    cartItems.forEach(product => {
-    total = total + product.quantity * product.unit_price
-    });
-    return total;
-  }
+// export const subtotalItems = cartItems => {
+//     let total = 0;
+//     cartItems.forEach(product => {
+//     total = product.quantity * product.unit_price
+//     return total;
+//     })
+//   }
 
+// export const subtotalItems = cartItems => {
+// let total = 0
+//   cartItems.forEach(product => {
+//       total = product.quantity * product.unit_price
+//       return total;
+//   });
+//   }
+
+export const subtotalItems = cartItems => {
+   cartItems.map(cartItem => (
+     cartItem.quantity * cartItem.unit_price
+   ))
+}
 
 export const getCartTotal = cartItems =>
   cartItems.reduce(
